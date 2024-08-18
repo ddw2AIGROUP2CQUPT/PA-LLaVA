@@ -61,8 +61,6 @@ python dataformat.py
 ## Training
 
 We used xtuner as a training tool, so please go to xtuner official to complete the environment configuration [https://github.com/InternLM/xtuner]. Then place the pallava folder under the xtuner_add folder into the xtuner folder.
-![image](https://github.com/user-attachments/assets/3088db36-941e-4758-bd33-bc5bd06ea64c)
-
 
 
 #### Domain Alignment
@@ -74,6 +72,10 @@ NPROC_PER_NODE=8 NNODES=2 PORT=12345 ADDR= NODE_RANK=0 xtuner train pallava_doma
 ```
 NPROC_PER_NODE=8 NNODES=2 PORT=12345 ADDR= NODE_RANK=0 xtuner train pallava_instruction_tuning.py --deepspeed deepspeed_zero2 --seed 1024
 ```
+
+## Result
+![image](https://github.com/user-attachments/assets/374027f5-bb3e-4a8e-ab25-d46aa328b908)
+
 
 ## Contact
 This repo is currently maintained by Dawei Dai (dw_dai@163.com) and his master's student Yuanhui Zhang (S230233056@stu.cqupt.edu.cn).
