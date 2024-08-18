@@ -1,6 +1,6 @@
 # PA-LLaVA: A Large Language-Vision Assistant for Human Pathology Image Understanding
 
-we developed a domain-speciffc large language-vision assistant (PA-LLaVA) for pathology image understanding.
+We developed a domain-speciffc large language-vision assistant (PA-LLaVA) for pathology image understanding. Specifically, (1) we first construct a human pathology image-text dataset by cleaning the public medical image-text data for domainspecific alignment; (2) Using the proposed image-text data, we first train a pathology language-image pretraining (PLIP) model as the specialized visual encoder for pathology image, and then we developed scale-invariant connector to avoid the information loss caused by image scaling; (3) We adopt two-stage learning to train PA-LLaVA, first stage for domain alignment, and second stage for end to end visual question & answering (VQA) task.
 
 ## Architecture
 
@@ -8,11 +8,11 @@ we developed a domain-speciffc large language-vision assistant (PA-LLaVA) for pa
 
 ## Model
 
-The weights for both the domain alignment and instruction fine-tuning phases are publicly available in the HuggingFace.[ddw2openface/PA-LLaVA · Hugging Face](https://huggingface.co/ddw2openface/PA-LLaVA)
+The weights for PLIP and the weights for both the domain alignment and instruction fine-tuning phases of PA-LLaVA are disclosed in the HuggingFace.[ddw2openface/PA-LLaVA · Hugging Face](https://huggingface.co/ddw2openface/PA-LLaVA)
 
 ## Data
 
-Here we only provide the download link for the public dataset and expose the image id index of our cleaned dataset on HuggIngface.
+Here we only provide the download link for the public dataset and expose the image id index of our cleaned dataset on HuggIngface.[ddw2openface/PA-LLaVA · Hugging Face](https://huggingface.co/ddw2openface/PA-LLaVA)
 
 #### Domain Alignment Stage
 
@@ -24,7 +24,7 @@ Quilt-1M: [Quilt-1M: One Million Image-Text Pairs for Histopathology (zenodo.org
 
 #### Instruction Tuning Stage
 
-PathVQA: https://link.zhihu.com/?target=https%3A//drive.google.com/drive/folders/1G2C2_FUCyYQKCkSeCRRiTTsLDvOAjFj5
+PathVQA: [https://link.zhihu.com/?target=https%3A//drive.google.com/drive/folders/1G2C2_FUCyYQKCkSeCRRiTTsLDvOAjFj5](https://drive.google.com/drive/folders/1G2C2_FUCyYQKCkSeCRRiTTsLDvOAjFj5)
 
 PMC-VQA: [xmcmic/PMC-VQA · Datasets at Hugging Face](https://huggingface.co/datasets/xmcmic/PMC-VQA)
 
