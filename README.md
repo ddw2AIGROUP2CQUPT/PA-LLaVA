@@ -61,7 +61,8 @@ python dataformat.py
 ## Training
 
 We used xtuner as a training tool, so please go to xtuner official to complete the environment configuration [https://github.com/InternLM/xtuner]. Then place the pallava folder under the xtuner_add folder into the xtuner folder.
-![efedfc7ceca1d07a9b71486ed9c2741](https://github.com/user-attachments/assets/1cb9c1a6-bd5f-4663-b02b-5607a4d3022a)
+![image](https://github.com/user-attachments/assets/3088db36-941e-4758-bd33-bc5bd06ea64c)
+
 
 
 #### Domain Alignment
