@@ -11,6 +11,7 @@ We developed a domain-speciffc large language-vision assistant (PA-LLaVA) for pa
 The weights for PLIP and the weights for both the domain alignment and instruction fine-tuning phases of PA-LLaVA are disclosed in the HuggingFace.[ddw2openface/PA-LLaVA · Hugging Face](https://huggingface.co/ddw2openface/PA-LLaVA)
 
 ## Data
+![image](https://github.com/ddw2AIGROUP2CQUPT/PA-LLaVA/blob/main/DataCleanProcess.png)
 
 Here we only provide the download link for the public dataset and expose the image id index of our cleaned dataset on HuggIngface.[ddw2openface/PA-LLaVA · Hugging Face](https://huggingface.co/ddw2openface/PA-LLaVA)
 
