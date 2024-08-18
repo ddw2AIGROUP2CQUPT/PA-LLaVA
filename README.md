@@ -13,6 +13,7 @@ The weights for PLIP and the weights for both the domain alignment and instructi
 ## Data
 ![image](https://github.com/ddw2AIGROUP2CQUPT/PA-LLaVA/blob/main/DataCleanProcess.png)
 
+### Step 1 Download the public datasets.
 Here we only provide the download link for the public dataset and expose the image id index of our cleaned dataset on HuggIngface.[ddw2openface/PA-LLaVA · Hugging Face](https://huggingface.co/ddw2openface/PA-LLaVA)
 
 #### Domain Alignment Stage
@@ -37,17 +38,35 @@ OSCC: https://data.mendeley.com/datasets/ftmp4cvtmb/1
 
 ColonPath : https://medfm2023.grand-challenge.org/datasets
 
+### Step 2 Data processing.
+First, use the image index of the clean dataset provided by us to extract the human pathological dataset, and then process it into the following format:
+```
+[
+	{
+		"image": ,
+		"caption": 
+	},
+]
+```
+
+Finally, run dataformate.py to get the format needed to train the model.
+```
+python dataformat.py
+```
+
 ## Training
 
 We used xtuner as a training tool, so please go to xtuner official to complete the environment configuration [https://github.com/InternLM/xtuner]. Then place the pallava folder under the xtuner_add folder into the xtuner folder.
 
 #### Domain Alignment
-
+```
 NPROC_PER_NODE=8 NNODES=2 PORT=12345 ADDR= NODE_RANK=0 xtuner train pallava_domain_alignment.py --deepspeed deepspeed_zero2 --seed 1024
+```
 
 #### Instruction Tuning
-
+```
 NPROC_PER_NODE=8 NNODES=2 PORT=12345 ADDR= NODE_RANK=0 xtuner train pallava_instruction_tuning.py --deepspeed deepspeed_zero2 --seed 1024
+```
 
 ## Contact
 This repo is currently maintained by Dawei Dai (dw_dai@163.com) and his master's student Yuanhui Zhang (S230233056@stu.cqupt.edu.cn).
