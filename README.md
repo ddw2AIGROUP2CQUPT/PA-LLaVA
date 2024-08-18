@@ -8,13 +8,13 @@ We developed a domain-speciffc large language-vision assistant (PA-LLaVA) for pa
 
 ## Model
 
-The weights for PLIP and the weights for both the domain alignment and instruction fine-tuning phases of PA-LLaVA are disclosed in the HuggingFace.
+The weights for PLIP and the weights for both the domain alignment and instruction fine-tuning phases of PA-LLaVA are disclosed in the HuggingFace(https://huggingface.co/OpenFace-CQUPT/Pathology-LLaVA).
 
 ## Data
 ![image](https://github.com/ddw2AIGROUP2CQUPT/PA-LLaVA/blob/main/DataCleanProcess.png)
 
 ### Step 1 Download the public datasets.
-Here we only provide the download link for the public dataset and expose the image id index of our cleaned dataset on HuggIngface.
+Here we only provide the download link for the public dataset and expose the image id index of our cleaned dataset on HuggingFace(https://huggingface.co/OpenFace-CQUPT/Pathology-LLaVA).
 #### Domain Alignment Stage
 
 PubMedVision-Alignment: [FreedomIntelligence/PubMedVision · Datasets at Hugging Face](https://huggingface.co/datasets/FreedomIntelligence/PubMedVision)
