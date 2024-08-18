@@ -4,7 +4,7 @@ We developed a domain-speciffc large language-vision assistant (PA-LLaVA) for pa
 
 ## Architecture
 
-![image](https://github.com/ddw2AIGROUP2CQUPT/PA-LLaVA/blob/main/xtuner_add/d285474a96a76781d5088a0a0dd85a3.png) 
+![image](https://github.com/ddw2AIGROUP2CQUPT/PA-LLaVA/blob/main/Architecture.png)
 
 ## Model
 
