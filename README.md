@@ -18,25 +18,25 @@ Here we only provide the download link for the public dataset and expose the ima
 
 #### Domain Alignment Stage
 
-PubMedVision-Alignment: [FreedomIntelligence/PubMedVision · Datasets at Hugging Face](https://huggingface.co/datasets/FreedomIntelligence/PubMedVision)
+	PubMedVision-Alignment: [FreedomIntelligence/PubMedVision · Datasets at Hugging Face](https://huggingface.co/datasets/FreedomIntelligence/PubMedVision)
 
-PMC-OA: [axiong/pmc_oa · Datasets at Hugging Face](https://huggingface.co/datasets/axiong/pmc_oa)
+	PMC-OA: [axiong/pmc_oa · Datasets at Hugging Face](https://huggingface.co/datasets/axiong/pmc_oa)
 
-Quilt-1M: [Quilt-1M: One Million Image-Text Pairs for Histopathology (zenodo.org)](https://zenodo.org/records/8239942)
+	Quilt-1M: [Quilt-1M: One Million Image-Text Pairs for Histopathology (zenodo.org)](https://zenodo.org/records/8239942)
 
 #### Instruction Tuning Stage
 
-PathVQA: https://drive.google.com/drive/folders/1G2C2_FUCyYQKCkSeCRRiTTsLDvOAjFj5
+	PathVQA: https://drive.google.com/drive/folders/1G2C2_FUCyYQKCkSeCRRiTTsLDvOAjFj5
 
-PMC-VQA: [xmcmic/PMC-VQA · Datasets at Hugging Face](https://huggingface.co/datasets/xmcmic/PMC-VQA)
+	PMC-VQA: [xmcmic/PMC-VQA · Datasets at Hugging Face](https://huggingface.co/datasets/xmcmic/PMC-VQA)
 
 #### Categorical dataset for zero-sample testing
 
-ICIAR 2018 BACH: https://iciar2018-challenge.grand-challenge.org/Download/
+	ICIAR 2018 BACH: https://iciar2018-challenge.grand-challenge.org/Download/
 
-OSCC: https://data.mendeley.com/datasets/ftmp4cvtmb/1 
+	OSCC: https://data.mendeley.com/datasets/ftmp4cvtmb/1 
 
-ColonPath : https://medfm2023.grand-challenge.org/datasets
+	ColonPath : https://medfm2023.grand-challenge.org/datasets
 
 ### Step 2 Data processing.
 First, use the image index of the clean dataset provided by us to extract the human pathological dataset, and then process it into the following format:
