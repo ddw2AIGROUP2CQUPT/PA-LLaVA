@@ -8,7 +8,7 @@ we developed a domain-speciffc large language-vision assistant (PA-LLaVA) for pa
 
 ## Model
 
-领域对齐和指令微调两个阶段的权重均公开于HuggingFace.[ddw2openface/PA-LLaVA · Hugging Face](https://huggingface.co/ddw2openface/PA-LLaVA)
+The weights for both the domain alignment and instruction fine-tuning phases are publicly available in the HuggingFace.[ddw2openface/PA-LLaVA · Hugging Face](https://huggingface.co/ddw2openface/PA-LLaVA)
 
 ## Data
 
