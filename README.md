@@ -4,7 +4,7 @@ we developed a domain-speciffc large language-vision assistant (PA-LLaVA) for pa
 
 ## Architecture
 
- [_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3916901031848625157&skey=@crypt_24346367_9184997c3f15be5a959433ddab101a36&mmweb_appid=wx_webfilehelper.jfif](_cgi-bin_mmwebwx-bin_webwxgetmsgimg__&MsgID=3916901031848625157&skey=@crypt_24346367_9184997c3f15be5a959433ddab101a36&mmweb_appid=wx_webfilehelper.jfif) 
+![image](https://github.com/ddw2AIGROUP2CQUPT/PA-LLaVA/blob/main/xtuner_add/d285474a96a76781d5088a0a0dd85a3.png) 
 
 ## Model
 
