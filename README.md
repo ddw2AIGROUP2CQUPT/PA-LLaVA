@@ -24,7 +24,7 @@ Quilt-1M: [Quilt-1M: One Million Image-Text Pairs for Histopathology (zenodo.org
 
 #### Instruction Tuning Stage
 
-PathVQA: [https://link.zhihu.com/?target=https%3A//drive.google.com/drive/folders/1G2C2_FUCyYQKCkSeCRRiTTsLDvOAjFj5](https://drive.google.com/drive/folders/1G2C2_FUCyYQKCkSeCRRiTTsLDvOAjFj5)
+PathVQA: https://drive.google.com/drive/folders/1G2C2_FUCyYQKCkSeCRRiTTsLDvOAjFj5
 
 PMC-VQA: [xmcmic/PMC-VQA · Datasets at Hugging Face](https://huggingface.co/datasets/xmcmic/PMC-VQA)
 
