@@ -85,6 +85,8 @@ NPROC_PER_NODE=8 NNODES=2 PORT=12345 ADDR= NODE_RANK=0 xtuner train pallava_inst
 ## Result
 ![image](https://github.com/user-attachments/assets/374027f5-bb3e-4a8e-ab25-d46aa328b908)
 
+![zero_shot](https://github.com/user-attachments/assets/01d68f23-dda5-434d-96c5-746a9f031095)
+
 ## Citation
 ```
 @misc{dai2024pallavalargelanguagevisionassistant,
