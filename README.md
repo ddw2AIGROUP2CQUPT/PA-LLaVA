@@ -14,7 +14,8 @@ The weights for PLIP and the weights for both the domain alignment and instructi
 
 ### Introduction
 These public datasets contain substantial amounts of data unrelated to human pathology. To obtain the human pathology image-text data, we performed two cleaning processes on the raw data, as illustrated in the follow figture: (1) Removing nonpathological images. (2) Removing nonhuman pathology data. Additionally, we excluded image-text pairs with textual descriptions of fewer than 20 words. Ultimately, we obtained 518,413 image-text pairs (named "PCaption-0.5M" ) for the aligned training dataset.
-Instruction fine-tuning phase we only cleaned PMC-VQA in the same way and obtained 15,788 question-answer pairs related to human pathology.
+
+Instruction fine-tuning phase we only cleaned PMC-VQA in the same way and obtained 15,788 question-answer pairs related to human pathology. Lastly, we combined PathVQA and Human pathology data obtained from PMC-VQA, thereby constructing a dataset of 35543 question-answer pairs.data.
 
 #### Data Cleaning Process
 
@@ -85,6 +86,7 @@ NPROC_PER_NODE=8 NNODES=2 PORT=12345 ADDR= NODE_RANK=0 xtuner train pallava_inst
 ![image](https://github.com/user-attachments/assets/374027f5-bb3e-4a8e-ab25-d46aa328b908)
 
 ## Citation
+```
 @misc{dai2024pallavalargelanguagevisionassistant,
       title={PA-LLaVA: A Large Language-Vision Assistant for Human Pathology Image Understanding}, 
       author={Dawei Dai and Yuanhui Zhang and Long Xu and Qianlan Yang and Xiaojing Shen and Shuyin Xia and Guoyin Wang},
@@ -94,6 +96,7 @@ NPROC_PER_NODE=8 NNODES=2 PORT=12345 ADDR= NODE_RANK=0 xtuner train pallava_inst
       primaryClass={cs.AI},
       url={https://arxiv.org/abs/2408.09530}, 
 }
+```
 ## Contact
 This repo is currently maintained by Dawei Dai (dw_dai@163.com) and his master's student Yuanhui Zhang (S230233056@stu.cqupt.edu.cn).
 
