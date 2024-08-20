@@ -21,7 +21,7 @@ Instruction fine-tuning phase we only cleaned PMC-VQA in the same way and obtain
 
 ![image](https://github.com/ddw2AIGROUP2CQUPT/PA-LLaVA/blob/main/DataCleanProcess.png)
 
-### Get the Dataset
+## Get the Dataset
 
 ### Step 1 Download the public datasets.
 Here we only provide the download link for the public dataset and expose the image id index of our cleaned dataset on HuggingFace(https://huggingface.co/OpenFace-CQUPT/Pathology-LLaVA).
