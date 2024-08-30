@@ -50,7 +50,7 @@ def encode_and_request(image_info,db_name):
         "max_tokens": 300
     }
     try:
-        response = requests.post("https://pro.aiskt.com/v1/chat/completions", headers=headers, json=payload)
+        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
         content = response.json()
         caption = content['choices'][0]['message']['content']
     except:
