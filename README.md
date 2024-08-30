@@ -76,6 +76,7 @@ python dataformat.py
 ## Training
 
 We used xtuner as a training tool, so please go to xtuner official to complete the environment configuration [https://github.com/InternLM/xtuner]. Then add the xtuner_add/pallava file to the installed xtuner code with the following location structure.
+
 ![1725014395365](https://github.com/user-attachments/assets/ff37e700-c704-4a53-a216-f26b1aba5c05)
 
 
@@ -93,6 +94,7 @@ NPROC_PER_NODE=8 NNODES=2 PORT=12345 ADDR= NODE_RANK=0 xtuner train pallava_inst
 ## Test
 
 First, replace or add all the files in xtuner_add/tool_add into the tool file of the xtuner runtime file with the following file location structure:
+
 ![1725014736404](https://github.com/user-attachments/assets/87b7d87f-e980-4355-8777-dfedf0c54903)
 ### PathVQA
 ```
