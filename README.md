@@ -2,6 +2,12 @@
 
 We developed a domain-speciffc large language-vision assistant (PA-LLaVA) for pathology image understanding. Specifically, (1) we first construct a human pathology image-text dataset by cleaning the public medical image-text data for domainspecific alignment; (2) Using the proposed image-text data, we first train a pathology language-image pretraining (PLIP) model as the specialized visual encoder for pathology image, and then we developed scale-invariant connector to avoid the information loss caused by image scaling; (3) We adopt two-stage learning to train PA-LLaVA, first stage for domain alignment, and second stage for end to end visual question & answering (VQA) task.
 
+## Updates：
+
+**[24/08/30] The test code has been update!**  
+
+**[24/08/20] Model weights have been updated in HuggingFace! [OpenFace-CQUPT/Pathology-LLaVA](https://huggingface.co/OpenFace-CQUPT/Pathology-LLaVA)**
+
 ## Architecture
 
 ![image](https://github.com/ddw2AIGROUP2CQUPT/PA-LLaVA/blob/main/Architecture.png)
@@ -69,7 +75,9 @@ python dataformat.py
 
 ## Training
 
-We used xtuner as a training tool, so please go to xtuner official to complete the environment configuration [https://github.com/InternLM/xtuner]. Then place the pallava folder under the xtuner_add folder into the xtuner folder.
+We used xtuner as a training tool, so please go to xtuner official to complete the environment configuration [https://github.com/InternLM/xtuner]. Then add the xtuner_add/pallava file to the installed xtuner code with the following location structure.
+![1725014395365](https://github.com/user-attachments/assets/ff37e700-c704-4a53-a216-f26b1aba5c05)
+
 
 
 #### Domain Alignment
@@ -81,6 +89,35 @@ NPROC_PER_NODE=8 NNODES=2 PORT=12345 ADDR= NODE_RANK=0 xtuner train pallava_doma
 ```
 NPROC_PER_NODE=8 NNODES=2 PORT=12345 ADDR= NODE_RANK=0 xtuner train pallava_instruction_tuning.py --deepspeed deepspeed_zero2 --seed 1024
 ```
+
+## Test
+
+First, replace or add all the files in xtuner_add/tool_add into the tool file of the xtuner runtime file with the following file location structure:
+![1725014736404](https://github.com/user-attachments/assets/87b7d87f-e980-4355-8777-dfedf0c54903)
+### PathVQA
+```
+NPROC_PER_NODE=8 xtuner pathvqa meta-llama/Meta-Llama-3-8B-Instruct --visual-encoder PLIP --llava ./instruction_tuning_weight_ft --prompt-template llama3_chat --data-path absolute_path/Path_VQA/path_vqa_test.json --work-dir absolute_path/logs/pathvqa --launcher pytorch --anyres-image
+```
+
+### PMCVQA
+```
+NPROC_PER_NODE=8 xtuner pmcvqa meta-llama/Meta-Llama-3-8B-Instruct --visual-encoder PLIP --llava ./instruction_tuning_weight_ft --prompt-template llama3_chat --data-path absolute_path/PMC-VQA/pmc-vqa_test_clean_answer_abcd.json --work-dir absolute_path/logs/pmcvqa --launcher pytorch --anyres-image
+```
+### Zero-Shot
+Here is an example with OSCC data.
+#### Generate answer
+```
+NPROC_PER_NODE=8 xtuner zero_shot meta-llama/Meta-Llama-3-8B-Instruct --visual-encoder PLIP --llava ./instruction_tuning_weight_ft --prompt-template llama3_chat --data-path absolute_path/OSCC/oscc.json --work-dir absolute_path/logs/oscc --launcher pytorch --anyres-image
+```
+#### Calculate score
+```
+python test/f1.py
+```
+### GPT4-Score
+```
+python python test/gpt4-scores.py
+```
+
 
 ## Result
 ![image](https://github.com/user-attachments/assets/374027f5-bb3e-4a8e-ab25-d46aa328b908)
