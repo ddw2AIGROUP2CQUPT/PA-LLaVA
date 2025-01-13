@@ -128,15 +128,16 @@ python python test/gpt4-scores.py
 
 ## Citation
 ```
-@misc{dai2024pallavalargelanguagevisionassistant,
-      title={PA-LLaVA: A Large Language-Vision Assistant for Human Pathology Image Understanding}, 
-      author={Dawei Dai and Yuanhui Zhang and Long Xu and Qianlan Yang and Xiaojing Shen and Shuyin Xia and Guoyin Wang},
-      year={2024},
-      eprint={2408.09530},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2408.09530}, 
-}
+@INPROCEEDINGS{10821785,
+  author={Dai, Dawei and Zhang, Yuanhui and Xu, Long and Yang, Qianlan and Shen, Xiaojing and Xia, Shuyin and Wang, Guoyin},
+  booktitle={2024 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)}, 
+  title={PA-LLaVA: A Large Language-Vision Assistant for Human Pathology Image Understanding}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={3138-3143},
+  keywords={Connectors;Pathology;Visualization;Codes;Computational modeling;Biological system modeling;Data models;Cleaning;Bioinformatics;Biomedical imaging;Pathology Image Understanding;VQA;LLaVA},
+  doi={10.1109/BIBM62325.2024.10821785}}
 ```
 ## Contact
 This repo is currently maintained by Dawei Dai (dw_dai@163.com) and his master's student Yuanhui Zhang (S230233056@stu.cqupt.edu.cn).
