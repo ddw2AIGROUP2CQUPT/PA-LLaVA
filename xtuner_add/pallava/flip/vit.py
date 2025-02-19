@@ -4,7 +4,7 @@ import torch.nn.functional as F
 from functools import partial
 
 from timm.models.vision_transformer import _cfg
-from fixdllava.flip.patch_embed import  PatchEmbed
+from pallava.flip.patch_embed import  PatchEmbed
 from timm.models.registry import register_model
 from timm.models.layers import trunc_normal_, DropPath
 
