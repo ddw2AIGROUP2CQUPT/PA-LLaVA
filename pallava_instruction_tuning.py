@@ -85,7 +85,6 @@ model = dict(
     llm_lora=dict(
         type=LoraConfig, r=128, lora_alpha=256, lora_dropout=0.05, bias='none', task_type='CAUSAL_LM'),
     visual_encoder='absolute path of plip',
-    projector_type=projector_type,
     cross_attention_freq=cross_attention_freq,
     num_hidden_layers=num_hidden_layers)
 
