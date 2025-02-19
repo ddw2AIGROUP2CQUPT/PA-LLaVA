@@ -8,16 +8,13 @@ from transformers import (AutoModelForCausalLM, AutoTokenizer,
                           CLIPImageProcessor, CLIPVisionModel)
 from mmengine.visualization import Visualizer, TensorboardVisBackend
 from peft import LoraConfig
-# from xtuner.dataset import LLaVADataset
 from pallava.dataset import LLaVADataset
 from pallava.default_collate_fn import default_collate_fn
 from xtuner.dataset.map_fns import llava_map_fn, template_map_fn_factory
 from xtuner.engine.hooks import DatasetInfoHook
 from pallava.evaluate_chat_hook import EvaluateChatHook
 from xtuner.engine.runner import TrainLoop
-# from xtuner.model import LLaVAModel
 from pallava.model import LLaVAModel
-# from model import LLaVAModel
 from xtuner.utils import PROMPT_TEMPLATE
 
 #######################################################################
