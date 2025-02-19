@@ -8,7 +8,7 @@
 import transformers
 transformers.logging.set_verbosity_error()
 import os
-from fixdllava.flip.fflip import (
+from pallava.flip.fflip import (
     VisionConfig, 
     VisionModel,
     BertModel, 
