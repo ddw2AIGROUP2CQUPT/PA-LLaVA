@@ -161,8 +161,7 @@ custom_hooks = [
         evaluation_images=evaluation_images,
         system=SYSTEM,
         prompt_template=prompt_template,
-        anyres_image=anyres_image,
-        projector_type=projector_type)
+        anyres_image=anyres_image)
 ]
 
 # configure default hooks
