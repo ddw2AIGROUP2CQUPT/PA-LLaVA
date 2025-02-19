@@ -30,7 +30,7 @@ from transformers.modeling_outputs import (
     TokenClassifierOutput,
 )
 
-from fixdllava.flip.mm import (
+from pallava.flip.mm import (
     VisionTrainedModel, 
     BertEmbeddings,
     BertEncoder,
