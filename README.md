@@ -96,6 +96,20 @@ NPROC_PER_NODE=8 NNODES=2 PORT=12345 ADDR= NODE_RANK=0 xtuner train pallava_inst
 First, replace or add all the files in xtuner_add/tool_add into the tool file of the xtuner runtime file with the following file location structure:
 
 ![1725014736404](https://github.com/user-attachments/assets/87b7d87f-e980-4355-8777-dfedf0c54903)
+
+### Before Test
+Our released weights are distributed training weights that can be directly loaded for training through XTuner. If you need merged weights, they can be merged using XTuner (using the weights from the domain alignment phase as an example):
+If you need to test the caption inference task with the first stage weights：
+```
+xtuner convert pth_to_hf path/pallava_domain_alignment.py ./domain_alignment_weight.pth ./domain_alignment_weight_ft
+xtuner convert merge meta-llama/Meta-Llama-3-8B-Instruct ./domain_alignment_weight_ft/llm_adapter ./domain_alignment_weight_ft/llm_merge_lora
+```
+If you need to use phase 2 weights for classification or VQA tasks(The VQA question-and-answer style has been provided in the paper):
+```
+xtuner convert pth_to_hf path/pallava_instruction_tuning.py ./instruction_tuning_weight.pth ./instruction_tuning_weight_ft
+xtuner convert merge meta-llama/Meta-Llama-3-8B-Instruct ./instruction_tuning_weight_ft/llm_adapter ./instruction_tuning_weight_ft/llm_merge_lora
+```
+
 ### PathVQA
 ```
 NPROC_PER_NODE=8 xtuner pathvqa meta-llama/Meta-Llama-3-8B-Instruct --visual-encoder PLIP --llava ./instruction_tuning_weight_ft --prompt-template llama3_chat --data-path absolute_path/Path_VQA/path_vqa_test.json --work-dir absolute_path/logs/pathvqa --launcher pytorch --anyres-image
