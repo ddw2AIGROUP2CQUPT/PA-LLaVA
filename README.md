@@ -99,6 +99,7 @@ First, replace or add all the files in xtuner_add/tool_add into the tool file of
 
 ### Before Test
 Our released weights are distributed training weights that can be directly loaded for training through XTuner. If you need merged weights, they can be merged using XTuner (using the weights from the domain alignment phase as an example):
+
 If you need to test the caption inference task with the first stage weights：
 ```
 xtuner convert pth_to_hf path/pallava_domain_alignment.py ./domain_alignment_weight.pth ./domain_alignment_weight_ft
