@@ -19,7 +19,7 @@ from mmengine import mkdir_or_exist
 from mmengine.dist import (collect_results, get_dist_info, get_rank, init_dist,
                            master_only)
 from mmengine.utils.dl_utils import set_multi_processing
-from fixdllava.utils import process_anyres_image
+from pallava.utils import process_anyres_image
 from peft import PeftModel
 from rich.console import Console
 from rich.table import Table
@@ -30,7 +30,7 @@ from transformers import (AutoModel, AutoModelForCausalLM, AutoTokenizer,
 from transformers import (AutoModel, AutoModelForCausalLM, AutoTokenizer,
                           BitsAndBytesConfig, SiglipImageProcessor,
                           SiglipVisionModel, GenerationConfig)
-from fixdllava.flip.fflip import VisionModel,VisionConfig
+from pallava.flip.fflip import VisionModel,VisionConfig
 import difflib 
 from xtuner.dataset.utils import (decode_base64_to_image, expand2square,
                                   get_bos_eos_token_ids)
@@ -118,7 +118,7 @@ class EvalDataset(Dataset):
             data = json.load(f)
         self.qid = list(data.keys())
         self.data = data
-        self.img_dir = "/home/ubuntu/san/Medical_Dataset"
+        self.img_dir = "path to images"
 
     
     def __len__(self):
@@ -212,8 +212,8 @@ def main():
 
     with LoadWoInit():
         if visual_encoder_path == 'PLIP':
-            vision_config = VisionConfig().from_json_file('/home/ubuntu/san/zyh/BioLLaVA/HumanLlama3/flip/config.json')
-            vision_checkpoint = torch.load('/home/ubuntu/san/zyh/BioLLaVA/HumanLlama3/flip/plip_80w_196token.bin', map_location="cpu")
+            vision_config = VisionConfig().from_json_file('path to plip/plip/config.json')
+            vision_checkpoint = torch.load('path to plip/plip/plip_80w_196token.bin', map_location="cpu")
             visual_encoder = VisionModel.from_pretrained('openai/clip-vit-base-patch16', config = vision_config, torch_dtype=TORCH_DTYPE_MAP[args.torch_dtype])
             visual_encoder.load_state_dict(vision_checkpoint)
             image_processor = CLIPImageProcessor.from_pretrained('openai/clip-vit-base-patch16')
