@@ -102,7 +102,6 @@ def parse_args():
 
     return args
 
-
 @master_only
 def master_print(msg):
     print(msg)
@@ -137,11 +136,6 @@ class EvalDataset(Dataset):
             'img': raw_image
         }
 
-
-    
-    
-
-        
 
 
 
